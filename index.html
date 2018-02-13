@@ -22,6 +22,10 @@ body {
     }
    */
 
+    .clearfix {
+        overflow:auto;
+    }
+
     .header {
         width: 960px;
          padding: 40px;
@@ -44,9 +48,11 @@ body {
          width: 495px;
          padding: 40px;
          margin: 50px;
+         float: right;
          text-align: center;
          background: #ebebeb;
          color: #777;
+         
           }
 
     .article    {
@@ -62,7 +68,7 @@ body {
          top: 0;
          left: 0;
          padding: 40px;
-         margin: 0;
+         margin-bottom: 5px;
          text-align: center;
          background: #ebebeb;
          font-weight: bold;
@@ -80,8 +86,7 @@ body {
           }
 
     .aside    {
-         top: 0;
-         left: 0;
+         float: right;
          padding: 40px;
          margin: 0;
          text-align: center;
@@ -97,23 +102,30 @@ body {
          background: #ebebeb;
          color: #777;
           }
-    
-
+    .middle {
+        width:990px;
+    }
     </style>
 
 </head>
 <body>
 
-    
     <div class="header">Header</div>
     <div class="nav">Navigation</div>
-    <div class ="wrapper">
-    <div class="section">Section</div>
-    <div class="article">Article</div>
-    <div class="header2">H1, H2, H3</div>
-    <div class="p">P</div>
-    <div class="aside">Aside</div>
-    <div class="footer">Footer</div>
+    <div class ="wrapper"></div>
+    <div class="clearfix">
+       <div class="middle">
+        <section class="section">Section
+            <div class="article">Article
+            <div class="header2">H1, H2, H3</div>  
+            <div class="p">P</div>
+            </div>
+        </section>
+        <div class="aside">Aside</div>
+       </div> 
+    </div>   
+    </section>   
+    <footer class="footer">Footer</footer>
     </div>
 </body>
 </html>
